@@ -2,7 +2,7 @@ const express = require('express');
 require('dotenv').config();
 
 const { initializeDatabase, configurePassport } = require('./config');
-const { setupMiddleware } = require('./middleware');
+const { setupMiddleware } = require('./middlewares');
 const routes = require('./routes');
 require('./cron');
 
