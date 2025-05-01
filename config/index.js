@@ -45,6 +45,8 @@ const configurePassport = () => {
             phone: null, // Google doesn't provide phone
             profilePicture: profile.photos[0]?.value,
             RoleId: userRole.id,
+            useRefreshTokens: true, // Default to refresh tokens
+            isEmailVerified: true, // Google verifies email
           });
           user.Role = userRole;
         }

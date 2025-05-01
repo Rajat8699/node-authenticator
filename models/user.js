@@ -71,6 +71,42 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: true,
   },
+  useRefreshTokens: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: true,
+  },
+  isEmailVerified: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+  },
+  emailVerificationToken: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  emailVerificationExpires: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
+  isPhoneVerified: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+  },
+  phoneVerificationOtp: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  phoneVerificationExpires: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
+  loginOtp: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  loginOtpExpires: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
 });
 
 User.belongsTo(Role);
