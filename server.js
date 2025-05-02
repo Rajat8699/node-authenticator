@@ -46,6 +46,7 @@ const startServer = async () => {
     await initializeDatabase();
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
+      console.log(`Swagger UI available at http://localhost:${PORT}/api-docs`);
     });
   } catch (error) {
     console.error('Failed to start server:', error);
